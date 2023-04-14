@@ -14,9 +14,13 @@
       <td><%= movie.title %></td>
       <td><%= movie.blurb %></td>
       <td><%= movie.date_released %></td>
+      <td><%= movie.country %></td>
+      <td><%= movie.showing_start %></td>
+      <td><%= movie.showing_end %></td>
       <td>
         <%= link_to 'Edit', edit_movie_path(movie) %>
         <%= button_to 'Delete', movie_path(movie), method: :delete %>
+        <%= link_to 'Reviews', movie_reviews_path(movie) %>
       </td>
     </tr>
   <% end %>
