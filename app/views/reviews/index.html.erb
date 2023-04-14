@@ -1,0 +1,9 @@
+<h1>Title <%= @movie.title %></h1>
+<h2>Movie Reviews</h2>
+<ul>
+  <% @reviews.each do |review| %>
+    <li><%= review.content %>(<%= review.created_at %>)</li>
+  <% end %>
+</ul>
+
+<%= link_to 'Movie List', movies_path %>
