@@ -49,6 +49,8 @@ gem 'devise'
 
 gem 'rest-client'
 
+gem 'active_model_serializers'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
