@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   resources :movies do
-    resources :reviews
+    resources :reviews, except: :show
   end
 end

@@ -2,7 +2,11 @@
 <h2>Movie Reviews</h2>
 <ul>
   <% @reviews.each do |review| %>
-    <li><%= review.content %>(<%= review.created_at %>)</li>
+    <li><%= review.content %></li>
+    <li><%= review.rating %>
+        <%= link_to 'Edit', edit_movie_review_path(@movie, review) %>
+        <%= button_to 'Delete', movie_review_path(@movie, review), method: :delete %>
+    </li>
   <% end %>
 </ul>
 
