@@ -17,7 +17,7 @@
   </div>
   <div>
     <%= form.label :date_released %>
-    <%= form.date_select :date_released %>
+    <%= form.date_field :date_released %>
   </div>
   <div>
     <%= form.label :country_of_origin %>
@@ -26,12 +26,12 @@
 
   <div>
     <%= form.label :showing_start %>
-    <%= form.datetime_select :showing_start %>
+    <%= form.date_field :showing_start %>
   </div>
 
   <div>
     <%= form.label :showing_end %>
-    <%= form.datetime_select :showing_end %>
+    <%= form.date_field :showing_end %>
   </div>
   <%= form.submit %>
 <% end %>

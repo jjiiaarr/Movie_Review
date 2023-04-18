@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_14_063809) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_18_054010) do
   create_table "address_barangays", charset: "utf8mb4", force: :cascade do |t|
     t.bigint "city_id"
     t.string "code"
@@ -48,10 +48,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_14_063809) do
   create_table "movies", charset: "utf8mb4", force: :cascade do |t|
     t.string "title"
     t.text "blurb"
-    t.datetime "date_released"
+    t.date "date_released"
     t.string "country"
-    t.datetime "showing_start"
-    t.datetime "showing_end"
+    t.date "showing_start"
+    t.date "showing_end"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
