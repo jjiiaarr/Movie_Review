@@ -3,5 +3,7 @@ class Movie < ApplicationRecord
   validates :blurb, presence: true
   validates :country, presence: true
 
+  belongs_to :user
+
   has_many :reviews
 end
