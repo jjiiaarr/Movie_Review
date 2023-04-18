@@ -51,6 +51,8 @@ gem 'rest-client'
 
 gem 'active_model_serializers'
 
+gem 'stimulus-rails'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
