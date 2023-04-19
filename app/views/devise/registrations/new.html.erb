@@ -29,15 +29,29 @@
     <%= f.label :address_region_id %>
     <%= f.collection_select :address_region_id,
                             Address::Region.all, :id, :name,
-                            { prompt: 'Please select region' },
+                            { prompt: 'Please select region' }, class: 'select2',
                             data: { location_target: 'selectedRegionId', action: 'change->location#fetchProvinces' } %>
   </div>
   <div>
     <%= f.label :address_provinces_id %>
     <%= f.collection_select :address_provinces_id,
                             [], nil, nil,
-                            { prompt: 'Please select province' },
-                            data: { location_target: 'selectedProvinceId' } %>
+                            { prompt: 'Please select province' }, class: 'select2',
+                            data: { location_target: 'selectedProvinceId', action: 'change->location#fetchCities ' } %>
+  </div>
+  <div>
+    <%= f.label :address_city_id %>
+    <%= f.collection_select :address_city_id,
+                            [], nil, nil,
+                            { prompt: 'Please select city' }, class: 'select2',
+                            data: { location_target: 'selectedCityId', action: 'change->location#fetchBarangays ' } %>
+  </div>
+  <div>
+    <%= f.label :address_barangay_id %>
+    <%= f.collection_select :address_barangay_id,
+                            [], nil, nil,
+                            { prompt: 'Please select barangay' }, class: 'select2',
+                            data: { location_target: 'selectedBarangayId' } %>
   </div>
   <div>
     <%= f.label :address %>
